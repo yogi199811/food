@@ -1,0 +1,1 @@
+document.querySelector("#main > section:nth-child(4) > div > div.col-span-10.col-start-2.md\\:col-span-6.md\\:col-start-4.xl\\:col-span-6.xl\\:col-start-4 > div > div.relative.aspect-square.w-full.pointer-events-none > svg")

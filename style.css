@@ -1,0 +1,1501 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #F4F1EA;
+    cursor: none;
+
+}
+
+#curser{
+    position: fixed;
+    z-index: 999;
+    width: 2vw;
+    border-radius: 50%;
+    height: 2vw;
+    background-color: #9e201f;
+}
+
+#loader {
+    width: 100%;
+    top: 0%;
+    height: 100%;
+    position: fixed;
+    background-color: black;
+    z-index: 9999;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)0.8s;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+
+}
+
+.ell,
+#ai {
+    fill: none;
+}
+
+
+#main {
+    /* position: relative; */
+    max-width: 100vw;
+    overflow-x: hidden;
+    /* background-color: #9e201f; */
+
+}
+
+#page1 {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+#page2 {
+    width: 100vw;
+    height: 100vh;
+    background-color: #F4F1EA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#page2 img {
+    position: absolute;
+}
+
+
+#nav {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#bottemnav {
+    width: 28vw;
+    height: 9vh;
+    background-color: #c33130;
+    position: fixed;
+    left: 50%;
+    z-index: 99;
+    bottom: 3%;
+    transform: translate(-50%, 0%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+#bottemnav button {
+    transition: ease-in-out 0.3s;
+    font-family: "teko";
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 2vh 1.8vw;
+    border-radius: 15px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+#part1 {
+    width: 40vw;
+    height: 10vh;
+    margin-right: 60px;
+
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#part1 a {
+    text-decoration: none;
+    font-size: 24px;
+    font-family: "Teko";
+    padding: 0 5px;
+    /* letter-spacing: 0.5px; */
+    color: black;
+    font-weight: lighter;
+}
+
+#center {
+    width: 100vw;
+    height: 90vh;
+    /* background-color: yellow; */
+}
+
+#photo {
+    
+    width: 62%;
+    height: 92%;
+    border-radius: 42%;
+    /* background-color: red; */
+    background-image: url(https://bavet.eu/assets/uploads/2023/05/hero-crop-1450x920.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    top: 45%;
+    z-index: 1;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+
+
+
+
+#slide {
+    /* overflow: hidden; */
+    width: 100vw;
+    height: 80vh;
+    /* background-color: blue; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* transform: rotate(5deg); */
+
+}
+
+#one {
+    width: 100vw;
+    height: 30vh;
+    /* background-color: rgb(207, 186, 186); */
+    margin: 25px 0;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    transform: rotate(-8deg);
+
+
+}
+
+#two {
+    width: 100vw;
+    height: 30vh;
+    /* background-color: rgb(207, 186, 186); */
+    margin: 25px 0;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    transform: rotate(-8deg);
+
+
+}
+
+#three {
+    width: 100vw;
+    height: 30vh;
+    /* background-color: rgb(207, 186, 186); */
+    margin: 25px 0;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    transform: rotate(-8deg);
+
+
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#one h3 {
+    -webkit-text-stroke-width: 1px;
+    font-weight: 500;
+    display: inline-block;
+    font-size: 10vw;
+    font-family: "teko";
+    -webkit-text-stroke-color: #9e201f;
+    -webkit-text-fill-color: transparent;
+    animation-name: animation;
+    animation-duration: 15s;
+    margin-right: 5px;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+    animation-delay: -0.5s;
+
+}
+
+#two h3 {
+    font-weight: 500;
+    display: inline-block;
+    font-size: 10vw;
+    font-family: "teko";
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #9e201f;
+    -webkit-text-fill-color: transparent;
+    animation-name: animation;
+    animation-duration: 15s;
+    margin-right: 5px;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: -1s;
+
+}
+
+#three h3 {
+    font-weight: 500;
+    display: inline-block;
+    font-size: 10vw;
+    font-family: "teko";
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #9e201f;
+    -webkit-text-fill-color: transparent;
+    animation-name: animation;
+    animation-duration: 15s;
+    margin-right: 5px;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+    animation-delay: -0.8s;
+
+
+}
+
+h3 span {
+    /* color: crimson; */
+    -webkit-text-stroke-width: 4px;
+
+
+    -webkit-text-fill-color: #9e201f;
+
+
+}
+
+
+
+
+
+@keyframes animation {
+    from {
+
+        transform: translateX(0%);
+
+    }
+
+    to {
+        transform: translateX(-100%);
+
+
+    }
+
+}
+
+#page3 {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+
+}
+
+#page4 {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.bar {
+    width: 70vw;
+    height: 12vh;
+    overflow: hidden;
+}
+
+.bar h1 {
+    text-align: center;
+    font-family: "teko";
+    font-size: 6vw;
+    color: #C33130;
+    margin-top: 70px;
+    text-transform: uppercase;
+}
+
+
+#secbar {
+    width: 70vw;
+    height: 15vh;
+    margin-top: 25px;
+    overflow: hidden;
+}
+
+#secbar>h3 {
+    overflow: hidden;
+    line-height: 1;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    font-family: "teko";
+    font-size: 1.6vw;
+    font-weight: 100;
+    transform: translate(-50%, -50%);
+    color: #C33130;
+    /* z-index: 999; */
+    text-transform: uppercase;
+    margin-top: 80px;
+
+
+}
+
+#plate1 {
+    cursor: pointer;
+
+    width: 22vw;
+    height: 22vw;
+    border-radius: 50%;
+    position: relative;
+    z-index: 333;
+    bottom: -10%;
+    right: 35%;
+    background-color: red;
+    background-image: url(https://bavet.eu/assets/uploads/2023/03/kennys-revenge-1.png);
+    background-size: cover;
+    background-position: center;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+
+}
+
+#arrow {
+    left: 10%;
+    width: 5vw;
+    height: 15vw;
+    border-radius: 50%;
+    position: absolute;
+    transform: rotate(-10deg);
+    top: 32%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+
+}
+
+#arrow2 {
+    display: block;
+    right: 25%;
+    width: 5vw;
+    height: 15vw;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 23%;
+    transform: rotate(200deg);
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+
+}
+
+
+
+#plate2 {
+    width: 22vw;
+    height: 22vw;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    background-color: red;
+    background-image: url(https://bavet.eu/assets/uploads/2023/03/holy-grail-1-1.png);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
+
+
+
+#plate3 {
+    width: 22vw;
+    height: 22vw;
+    cursor: pointer;
+
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-20%, -50%);
+    background-color: red;
+    background-image: url(https://bavet.eu/assets/uploads/2023/03/holy-mary-1.png);
+    background-size: cover;
+    background-position: center;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
+#plate4 {
+    cursor: pointer;
+
+    width: 22vw;
+    height: 22vw;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 3%;
+    left: 35%;
+    transform: translate(-50%, 0%);
+    background-color: red;
+    background-image: url(https://bavet.eu/assets/uploads/2023/03/spinning-plate-1-1-1.png);
+    background-size: cover;
+    background-position: center;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
+
+#plate5 {
+    cursor: pointer;
+
+    width: 22vw;
+    height: 22vw;
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    right: 10%;
+    transform: translate(0%, -50%);
+    background-color: red;
+    background-image: url(https://bavet.eu/assets/uploads/2023/03/baveat-combo-1.png);
+    background-size: cover;
+    background-position: center;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
+
+#plate6 {
+    cursor: pointer;
+
+    width: 22vw;
+    height: 22vw;
+    border-radius: 50%;
+    position: absolute;
+    top: 80%;
+    right: 4%;
+    transform: translate(50%, -50%);
+    /* background-color: red; */
+    background-image: url(https://bavet.eu/assets/uploads/2023/03/BAVET-HOT-TOMATO-1450x1456.png);
+    background-size: cover;
+    background-position: center;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
+#page5 {
+
+
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+}
+
+#page5>.btn{
+    text-align: center;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 2vh 5vw;
+    border-radius: 10px;
+    font-family: "teko";
+    background-color: #c33130;
+    color: white;
+    text-transform: uppercase;
+    font-size: 19px;
+    border: none;
+    transition: ease-in-out 0.3s;
+
+
+    
+
+}
+
+#page5>.btn:hover{
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #C33130;
+    color: #C33130;
+}
+
+
+
+
+
+#page5 #picture {
+    margin: 20px 10px;
+    width: 98vw;
+    height: 95vh;
+    /* background-color: lightblue; */
+    white-space: nowrap;
+    overflow-x: hidden;
+    border-radius: 25px;
+}
+
+
+@keyframes picc {
+
+    from {
+        transform: translate(0%);
+
+    }
+
+    to {
+        transform: translate(-1200%);
+
+
+    }
+
+}
+
+#page5 #picture .imge {
+    width: 100%;
+    height: 100%;
+    background-color: lightcoral;
+    display: inline-block;
+    margin-right: -8px;
+    animation-name: picc;
+    animation-duration: 100s;
+    animation-play-state: running;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+#page5 #picture .imge:nth-child(1) {
+    background-image: url(https://bavet.eu/assets/uploads/2023/03/Bavet2-1-1450x1088.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#page5 #picture .imge:nth-child(2) {
+    background-image: url(https://bavet.eu/assets/uploads/2023/03/BAVET-Opening_Leuven-25-1450x967.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#page5 #picture .imge:nth-child(3) {
+    background-image: url(https://bavet.eu/assets/uploads/2023/03/BAVET-Ixelles-Food-12-1450x967.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#page5 #picture .imge:nth-child(4) {
+    background-image: url(https://bavet.eu/assets/uploads/2023/03/2019-BAVET-GENT-HOOIAARD-INTERIOR-13-1-1450x967.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#page5 #picture .imge:nth-child(5) {
+    background-image: url(https://bavet.eu/assets/uploads/2023/03/Copy-of-INTERIOR_KORTRIJK-4-3-1450x967.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+#page5 #picture .imge:nth-child(6) {
+    background-image: url(https://bavet.eu/assets/uploads/2023/03/2022-Bavet-Oostende-Opening-24-05-2022-11-1-scaled-1450x2175.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#page5 #picture .imge:nth-child(7) {
+    background-image: url(https://bavet.eu/assets/uploads/2023/03/www.guyhouben.com_bavetluik_fullres-16-1450x967.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#page5 #picture .imge:nth-child(8) {
+    background-image: url(https://bavet.eu/assets/uploads/2023/03/BSS-muze.jpg);
+    background-size: cover;
+    background-position: top;
+}
+
+
+#page5 #picture .imge:nth-child(9) {
+    background-image: url(https://bavet.eu/assets/uploads/2023/03/Bavet-Gent-Verloren-Kost-05-scaled-1450x1813.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+#page5 #picture .imge:nth-child(10) {
+    background-image: url(https://bavet.eu/assets/uploads/2023/03/INTERIOR_KORTRIJK-27-1-1450x1087.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+#page5 #picture .imge:nth-child(11) {
+    background-image: url(https://bavet.eu/assets/uploads/2023/03/17436159_1626362627381744_2166915646045572714_o-1-1450x966.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#page5 #picture .imge:nth-child(12) {
+    background-image: url(https://bavet.eu/assets/uploads/2023/03/2022-Bavet-Oostende-Opening-24-05-2022-11-1-scaled-1450x2175.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+#page5 #text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: red; */
+    text-align: center;
+    width: 60vw;
+    height: 10vh;
+}
+
+#page5 #text h3 {
+    font-family: "teko";
+    color: white;
+    font-size: 3.1vw;
+    line-height: 1;
+    font-weight: 100;
+}
+
+#page5 #text button {
+    transition: ease-in-out 0.3s;
+
+    text-align: center;
+    padding: 2vh 5vw;
+    border-radius: 10px;
+    font-family: "teko";
+    background-color: #c33130;
+    color: white;
+    text-transform: uppercase;
+    font-size: 19px;
+    border: none;
+    margin-top: 4vh;
+}
+
+#page5 #text button:hover{
+    background-color: white ;
+    color: #C33130;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#page6 {
+    width: 100vw;
+    height: 40vh;
+    /* background-color:lightgreen; */
+    position: relative;
+}
+
+
+.thirdbar {
+    width: 70vw;
+    height: 12vh;
+    position: relative;
+    left: 50%;
+    margin-top: 30px;
+    transform: translateX(-50%);
+
+    overflow: hidden;
+}
+
+.thirdbar h1 {
+    text-align: center;
+    font-family: "teko";
+    font-size: 6vw;
+    color: #C33130;
+    margin-top: 100px;
+    text-transform: uppercase;
+
+}
+
+
+.fourbar {
+    width: 70vw;
+    height: 14vh;
+    overflow: hidden;
+    bottom: -4%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    /* background-color: yellow; */
+}
+
+.fourbar>h3 {
+    line-height: 1;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    font-family: "teko";
+    font-size: 1.6vw;
+    font-weight: 100;
+    transform: translate(-50%, -50%);
+    color: #C33130;
+    /* z-index: 999; */
+    text-transform: uppercase;
+    margin-top: 100px;
+}
+
+#page7 {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#page7 #cd {
+    width: 35vw;
+    height: 35vw;
+    border-radius: 50%;
+    position: relative;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #C33130;
+}
+
+#page7 img {
+    width: 35vw;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+#page7 #rframe {
+    width: 20vw;
+    height: 70vh;
+    border-radius: 5px;
+    position: absolute;
+    right: 5%;
+    bottom: 50%;
+    background-image: url(https://bavet.eu/assets/uploads/2023/03/BAVET-Oostende-Campagne-07837-1-scaled-1450x2175.jpg);
+    background-size: cover;
+    background-position: center;
+
+    background-color: #eabc15;
+}
+
+
+
+
+
+#page7 #lframe {
+    width: 20vw;
+    background-image: url(https://bavet.eu/assets/uploads/2023/03/BAVET-Kiosk_Leuven-28102021-89-scaled-1450x1813.jpg);
+    height: 70vh;
+    border-radius: 5px;
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    background-size: cover;
+    background-position: center;
+
+    background-color: #4715ea;
+}
+
+#page8 #cd2 {
+    width: 45vw;
+    height: 45vw;
+    border-radius: 50%;
+    position: relative;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #C33130;
+    background-image: url(https://bavet.eu/assets/uploads/2023/05/takeout-bag-1.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 2;
+}
+
+#page8 {
+    width: 100vw;
+    height: 100vh;
+    background-color: #C33130;
+    /* background-color:rgb(77, 144, 244); */
+
+    position: relative;
+}
+
+#page8 img {
+    position: relative;
+    width: 58%;
+    /* height: 100%; */
+    /* object-fit: cover; */
+    object-position: center;
+    z-index: 11;
+    /* width: 45vw;
+    height: 45vw; */
+    position: relative;
+    bottom: 22%;
+    left: 50%;
+    /* transition: liner 1s; */
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+#page9 {
+    width: 100vw;
+    height: 60vh;
+    /* background-color:rgb(77, 144, 244); */
+    background-color: #C33130;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+
+
+    position: relative;
+}
+
+#horigental {
+    width: 30vw;
+    height: 10vh;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 5px;
+}
+
+.box {
+    width: 25%;
+    height: 85%;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+#page9 h3 {
+    font-family: "teko";
+    color: white;
+    font-weight: 100;
+    font-size: 1.3vw;
+}
+
+#page10 {
+    width: 100vw;
+    height: 100vh;
+    /* background-color:rgb(77, 144, 244); */
+    background-color: #C33130;
+
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    /* overflow: hidden; */
+}
+
+#left {
+    width: 50vw;
+    height: 100vh;
+
+}
+
+#left #mobile {
+    object-fit: cover;
+    object-position: center;
+    margin-left: 150px;
+    height: 100%;
+}
+
+#right {
+    width: 50vw;
+    position: relative;
+    height: 100vh;
+    background-color: #C33130;
+}
+
+
+.fifthbar {
+    width: 40vw;
+    height: 12vh;
+    overflow: hidden;
+    right: 0%;
+    top: 5%;
+    position: relative;
+    /* background-color: yellow; */
+}
+
+.fifthbar h1 {
+    position: relative;
+    top: 80%;
+
+    font-family: "teko";
+    font-size: 6vw;
+    color: #fff;
+    /* margin-top: 300px; */
+    text-transform: uppercase;
+
+}
+
+#right h5 {
+    position: relative;
+    font-size: 1.3vw;
+    font-weight: 100;
+    line-height: 1.1;
+    color: #fff;
+    opacity: 0.7;
+
+    top: 12%;
+    font-family: "teko";
+
+
+}
+
+#right #scan {
+    width: 27vw;
+    height: 15vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 18%;
+
+    /* background-color: #4715ea; */
+}
+
+
+#page11 {
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+}
+
+#page11 h2 {
+    font-family: "teko";
+    text-align: center;
+    font-size: 3.1vw;
+    line-height: 0.9;
+    color: #C33130;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-top: 4vw;
+}
+
+#container {
+    width: 100vw;
+    margin-top: 80px;
+    height: 45vh;
+    /* background-color: #4715ea; */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 3vh;
+    /* justify-content: space-around; */
+}
+
+#container .card {
+    width: 25%;
+    height: 80%;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: ease-in-out 0.3s;
+}
+
+#container .card:hover {
+    background-color: #C33130;
+    color: white;
+
+}
+
+#bottemnav :hover {
+    background-color: white;
+    color: #C33130;
+
+}
+
+
+
+#container .card:hover img {
+    filter: brightness(100);
+}
+
+
+#page12 {
+    width: 100vw;
+    height: 100vh;
+    background-color: #bcb0e2;
+    position: relative;
+    display: flex;
+}
+
+#lside {
+    width: 50vw;
+    height: 100vh;
+    background-color: #9e201f;
+    /* background-image: url(https://bavet.eu/assets/uploads/2023/03/BAVET-Latem_Smaken-2023-Final-1347-1450x967.jpg); */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#rside {
+    width: 50vw;
+    height: 100vh;
+    background-color: #8eff8a;
+    /* background: url(https://bavet.eu/assets/uploads/2023/05/baveteer-lena.webp); */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#lside img{
+    position: absolute;
+    width: 100%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+#lside img:nth-child(1){
+    filter: grayscale();
+}
+
+#lside img:nth-child(2){
+    clip-path: circle(0% at 100px 100px);
+
+}
+
+#rside img{
+    position: absolute;
+    width: 100%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+#rside img:nth-child(1){
+    filter: grayscale();
+}
+
+#rside img:nth-child(2){
+
+    clip-path: circle(0% at 100px 100px);
+}
+
+/* #photo img{
+    position: absolute;
+    width: 100%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 42%;
+
+}
+
+#photo img:nth-child(1){
+    filter: grayscale();
+}
+
+#photo img:nth-child(2){
+
+    clip-path: circle(0% at 100px 100px);
+} */
+
+
+
+
+#page13 {
+    width: 100vw;
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+}
+
+
+#page13 h4 {
+    text-align: center;
+    padding-top: 200px;
+    font-family: "teko";
+    color: #C33130;
+    font-weight: 100;
+    font-size: 3vh;
+
+}
+
+#page13 #finger {
+    position: absolute;
+    right: -3%;
+    top: 0;
+    object-fit: cover;
+    width: 33vw;
+
+}
+
+#page13 #pics {
+    font-family: "teko";
+    display: flex;
+    /* padding: 0 3vw; */
+    align-items: center;
+    justify-content: space-around;
+    gap: 5px;
+    margin-top: 4vh;
+
+    width: 100vw;
+    height: 55vh;
+    /* background-color: #8eff8a; */
+}
+
+
+#page13 #pics .smallcard {
+    width: 32%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#page13 #pics .smallcard .cardpic {
+    width: 100%;
+    height: 60%;
+    background-color: #bcb0e2;
+    background-image: url(https://bavet.eu/assets/uploads/2023/07/DSC_3253-2-1450x967.jpg);
+    background-position: bottom;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+
+#page13 #pics .smallcard:nth-child(2) .cardpic {
+    background-image: url(https://bavet.eu/assets/uploads/2023/04/Chef-ENG.png);
+    background-position: top;
+}
+
+#page13 #pics .smallcard:nth-child(3) .cardpic {
+    background-image: url(https://bavet.eu/assets/uploads/2023/05/hero-crop-1450x920.jpg);
+    background-position: top;
+
+}
+
+
+.smallcard h2 {
+
+    font-family: "teko";
+    color: #C33130;
+    font-weight: 100;
+    font-size: 2vw;
+    line-height: 1;
+    text-transform: uppercase;
+
+}
+
+.smallcard p {
+    font-size: 2.5vh;
+    font-weight: 100;
+    opacity: 0.7;
+}
+
+.smallcard h3 {
+    font-size: 2.5vh;
+    font-weight: 100;
+    opacity: 0.7;
+}
+
+#page13 button {
+    text-align: center;
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 2vh 4vw;
+    border-radius: 10px;
+    font-family: "teko";
+    background-color: #c33130;
+    color: white;
+    text-transform: uppercase;
+    font-size: 19px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#page14 {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 1vh;
+
+}
+
+#side1 {
+    border-radius: 10px;
+    width: 50vw;
+    height: 99vh;
+
+}
+
+#side1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+#side2 {
+    border-radius: 10px;
+    padding-top: 5vw;
+
+    width: 50vw;
+    height: 99vh;
+    background-color: rgb(255, 255, 255);
+}
+
+.colum {
+    width: 40vw;
+    height: 12vh;
+    overflow: hidden;
+    /* background-color: #4715ea; */
+    margin-top: 5px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+}
+
+.colum h1 {
+    padding-top: 12vw;
+    text-align: center;
+    font-family: "teko";
+    font-weight: 600;
+    line-height: 0.8;
+    font-size: 6vw;
+    color: #C33130;
+    text-transform: uppercase;
+}
+
+#side2 img {
+    position: absolute;
+    right: 0%;
+    object-fit: cover;
+    width: 25vh;
+    top: 0;
+}
+
+
+#page15 {
+    width: 100vw;
+    height: 75vh;
+    background-color: #C33130;
+    position: relative;
+    font-family: "teko";
+}
+
+#page15 #kalam1 {
+    position: absolute;
+    left: 25%;
+    top: 15%;
+    width: 12vw;
+    height: 50vh;
+    /* background-color: #8eff8a; */
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+
+}
+
+#page15 #kalam1 h3 {
+    opacity: 0.9;
+    font-family: "teko";
+    color: white;
+    font-weight: 100;
+    font-size: 3vh;
+}
+
+#page15 #kalam2 {
+    position: absolute;
+    left: 40%;
+    top: 15%;
+    width: 12vw;
+    height: 50vh;
+    /* background-color: #8eff8a; */
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+
+}
+
+#page15 #kalam2 h3 {
+    opacity: 0.9;
+
+    font-family: "teko";
+    color: white;
+    font-weight: 100;
+    font-size: 3vh;
+}
+
+
+#page15 #kalam3 {
+    position: absolute;
+    left: 55%;
+    top: 15%;
+    width: 12vw;
+    height: 50vh;
+    /* background-color: #8eff8a; */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+
+}
+
+#page15 #kalam3 h3 {
+    opacity: 0.9;
+
+    font-family: "teko";
+    color: white;
+    font-weight: 100;
+    font-size: 3vh;
+}
+
+
+#page15 #kalam4 {
+    position: absolute;
+    left: 70%;
+    top: 15%;
+    width: 20vw;
+    height: 50vh;
+    /* background-color: #2b90f4; */
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+
+}
+
+#kalam4 #icon {
+    width: 100%;
+    height: 25%;
+}
+
+#kalam4 #icon img {
+    margin-top: 2vh;
+    width: 2.5vw;
+    margin: 2vh 2vh;
+    filter: brightness(10);
+}
+
+#icon2 .div {
+    width: 3vw;
+    height: 3vw;
+    margin: 2vh 1vh;
+
+
+    background-color: #9e201f;
+    border-radius: 8px;
+    display: inline-block;
+
+}
+
+#icon2 .div h5 {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-20%, -50%);
+    font-size: 20px;
+    color: white;
+    font-weight: 100;
+}
+
+
+#icon2 .div:nth-child(3) {
+    background-color: white;
+    color: #C33130;
+}
+
+#page15 #imggg {
+    position: absolute;
+    width: 5vw;
+    top: 50%;
+}
+
+#made {
+    width: 284px;
+    z-index: 3;
+}
+
+#arrow3 {
+    opacity: 0;
+}
+
+#arrow4 {
+    opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+#h1 {
+    font-family: "teko";
+    color: #C33130;
+    font-size: 20vw;
+    font-weight: 100;
+}
+
+
+@keyframes annu {
+    0% {
+        transform: translateY(70px);
+    }
+
+    50% {
+        transform: translateY(-70px);
+    }
+
+    100% {
+        transform: translateY(70px);
+    }
+
+
+
+}
