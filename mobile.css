@@ -55,16 +55,16 @@
     }
 
     #bottemnav {
-        width: 96vw;
-        height: 10vh;
+        width: 94vw;
+        height: 8vh;
         bottom: 2%;
         position: fixed;
     }
 
     #bottemnav button {
-        padding: 1.3vh 4vw;
+        padding: 1.1vh 3.5vw;
         border-radius: 15px;
-        font-size: 17px;
+        font-size: 15px;
     }
 
     #slide {
@@ -154,14 +154,18 @@
 
     .bar {
         width: 100vw;
-        height: 6vh;
+        height: 5vh;
         margin-top: 1vh;
+        padding: 0 0vw;
         /* background-color: #8eff8a; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .bar h1 {
         font-family: "teko";
-        font-size: 7vw;
+        font-size: 6.5vw;
         color: #C33130;
         margin-top: 70px;
         line-height: 1;
@@ -173,7 +177,8 @@
         height: 12vh;
         margin-top: 10vh;
         overflow: hidden;
-        background-color: #4715ea;
+        /* background-color: #4715ea; */
+        padding: 0 8vw;
     }
 
     #secbar>h3 {
@@ -183,7 +188,7 @@
         top: 50%;
         left: 50%;
         font-family: "teko";
-        font-size: 5vw;
+        font-size: 2.5vh;
         font-weight: 100;
         -webkit-transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
@@ -401,14 +406,17 @@
     #page6 {
         padding-bottom: 3vh;
         height: 70vh;
-        background-color: #4715ea;
+        /* background-color: #4715ea; */
     }
 
     .thirdbar {
         width: 100vw;
-        background-color: #8eff8a;
-        height: 9vh;
+        /* background-color: #8eff8a; */
+        height: 7vh;
         position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         left: 50%;
         -webkit-transform: translateX(-50%);
             -ms-transform: translateX(-50%);
@@ -420,7 +428,7 @@
     .thirdbar h1 {
         text-align: center;
         font-family: "teko";
-        font-size: 12vw;
+        font-size: 9vw;
         color: #C33130;
         text-transform: uppercase;
 
@@ -428,6 +436,11 @@
 
     .fourbar {
         width: 100vw;
+        height: 18vh;
+        margin-top: 8vh;
+        /* text-align: center; */
+        /* background-color: #4715ea; */
+        padding: 0 6vw;
     }
 
     .fourbar>h3 {
@@ -700,13 +713,13 @@
         display: none;
         width: 100vw;
         height: 40vh;
-        background-color: #9e201f;
+        /* background-color: #9e201f; */
     }
 
     #rside {
         width: 100vw;
         height: 60vh;
-        background-color: #8eff8a;
+        /* background-color: #8eff8a; */
         background: url(https://bavet.eu/assets/uploads/2023/05/baveteer-lena.webp);
         background-size: cover;
         background-position: center;

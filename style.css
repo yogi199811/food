@@ -119,7 +119,7 @@ svg {
     background-color: #c33130;
     position: fixed;
     left: 50%;
-    z-index: 99;
+    z-index: 999;
     bottom: 3%;
     -webkit-transform: translate(-50%, 0%);
         -ms-transform: translate(-50%, 0%);
